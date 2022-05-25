@@ -24,7 +24,7 @@ See file [INSTALL](INSTALL)
 
 Examples:
 
-    $ ./src/tonorm data/spreadesheet.xlsx
+    $ ./src/tonorm data/spreadsheet.xlsx
     $ ./src/tonorm data/image.png
     $ ./src/tonorm data/text.txt
 
