@@ -7,7 +7,7 @@
 1. Open your data in any program (most often MS Excel),
 2. take a screenshot,
 3. paste the screenshot in a MS Word document,
-4. Change the file suffix to `.norm`.
+4. change the file suffix to `.norm`.
 
 ## The script
 
