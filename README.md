@@ -5,15 +5,16 @@
 ## File format `.norm`
 
 1. Open your data in any program (most often MS Excel),
-2. Take a screenshot,
-3. Paste the screenshot in a MS Word document.
-4. Change the file suffix to `.norm`
+2. take a screenshot,
+3. paste the screenshot in a MS Word document,
+4. Change the file suffix to `.norm`.
 
 ## The script
 
-The current version attempts to open an infile with the user's preferred
-application (according to file type), and then proceeds with steps 2--4 above.
-Furthermore, the screenshot is taken of the opened application (and not the whole desktop).
+The current [script](src/tonorm) attempts to open an infile with the user's
+preferred application (according to file type), and then proceeds with steps
+2-4 above.  Furthermore, the screenshot is taken of the opened application and
+not the whole desktop.
 
 ## Installation
 
