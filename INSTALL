@@ -1,0 +1,16 @@
+# Install instructions
+
+- Last modified: ons maj 25, 2022  04:28
+- Sign: JN
+
+
+Current script is tested on Ubuntu Linux 20.04.
+
+Requirements:
+
+- xdotool
+- xdg-open
+- import (imagemagick)
+- pandoc
+
+

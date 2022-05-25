@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# File: tonorm
+# Usage: tonorm file
+# Description: Attempts to convert file to file.norm
+# Copyright (C) 2020 nylander <johan.nylander@nrm.se>
+# Distributed under terms of the MIT license.
+# Last modified: ons maj 25, 2022  05:29
+
+# TODO: parse argv for several file names
+x=$(basename "$1")
+name=${x%.*}
+
+# Temp files
+TMP_FILE=$(mktemp -q /tmp/norm.XXXXXX || exit 1)
+TMP_PNG="${TMP_FILE}.png"
+TMP_MD="${TMP_FILE}.txt"
+TMP_DOCX="${TMP_FILE}.docx"
+
+# 1. Open a specific file with xdg-open (or gvfs-open)
+xdg-open "$1" 2> /dev/null || exit 1
+
+# 2. Find out the window id of that process
+wid=$(sleep 3s && xdotool getactivewindow)
+
+# 3. Take a screenshot of that specific window
+import -border -window "${wid}" "${TMP_PNG}"
+
+# 4. Close the opened window
+xdotool getactivewindow windowclose
+
+# 5. Create a docx with pandoc
+# TODO: Figure out how to have landscape output (more difficult with pandoc docx than expected)
+echo "![]("${TMP_PNG}")" > "${TMP_MD}"
+pandoc -s "${TMP_MD}" -o "${TMP_DOCX}"
+rm "${TMP_MD}" "${TMP_PNG}"
+
+# 6. Move docx to norm
+mv "${TMP_DOCX}" "${name}.norm"
+
+exit
+
