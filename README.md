@@ -1,4 +1,4 @@
-# Convert you data to the norm format!
+# Convert your data to the norm format!
 
 ![](img/norm_normal_file_format.png)
 
