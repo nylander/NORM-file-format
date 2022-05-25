@@ -1,15 +1,10 @@
-# Convert you data to the norm format
-
-- Last modified: ons maj 25, 2022  05:34
-- Sign: nylander
-
----
+# Convert you data to the norm format!
 
 ![](img/norm_normal_file_format.png)
 
 ## File format `.norm`
 
-1. Open the data in a program,
+1. Open your data in any program (most often MS Excel),
 2. Take a screenshot,
 3. Paste the screenshot in a MS Word document.
 4. Change the file suffix to `.norm`
@@ -28,8 +23,7 @@ See file [INSTALL](INSTALL)
 
 Examples:
 
-    ./src/tonorm data/spreadesheet.xlsx
-    ./src/tonorm data/image.png
-    ./src/tonorm data/text.txt
-
+    $ ./src/tonorm data/spreadesheet.xlsx
+    $ ./src/tonorm data/image.png
+    $ ./src/tonorm data/text.txt
 
