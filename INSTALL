@@ -1,6 +1,6 @@
 # Install instructions
 
-- Last modified: ons maj 25, 2022  04:28
+- Last modified: mån jun 13, 2022  06:26
 - Sign: JN
 
 
@@ -9,7 +9,7 @@ Current script is tested on Ubuntu Linux 20.04.
 Requirements:
 
 - xdotool
-- xdg-open
+- xdg-open (xdg-utils)
 - import (imagemagick)
 - pandoc
 
